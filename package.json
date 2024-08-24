@@ -1,0 +1,53 @@
+{
+  "name": "electron-screenshot-app",
+  "version": "1.0.0",
+  "description": "An Electron app for taking screenshots",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "build": "electron-builder --linux",
+    "build:verbose": "electron-builder --linux --config.npmRebuild=true --debug --linux AppImage",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "make": {
+    "targets": [
+      {
+        "name": "deb",
+        "platform": "linux"
+      }
+    ]
+  },
+  "build": {
+    "appId": "com.yourcompany.yourappname",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ],
+      "maintainer": "Sigmund Frost <example@example.com>",
+      "category": "Utility"
+    },
+    "icon": "assets/icon.png"
+  },
+  "keywords": [],
+  "author": "Sigmund Frost",
+  "maintainer": "Sigmund Frost <example@example.com>",
+  "homepage": "https://example.com/electron-screenshot-app",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^32.0.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}

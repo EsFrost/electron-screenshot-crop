@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Screenshot App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; img-src 'self' data:;">
+  <style>
+    body { font-family: Arial, sans-serif; }
+    #screenshot-container { max-width: 100%; }
+    #cropper-container { max-width: 100%; max-height: 70vh; }
+  </style>
+</head>
+<body>
+  <h1>Screenshot App</h1>
+  <button id="take-screenshot">Take Screenshot</button>
+  <button id="crop-screenshot" disabled>Crop Screenshot</button>
+  <div id="screenshot-container"></div>
+  <div id="cropper-container"></div>
+  <button id="save-image">Save</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>
