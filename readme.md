@@ -9,7 +9,7 @@ Basic electron app that takes a screenshot of the monitor of choice and gives th
 3. There appear 2 save buttons if the image is cropped
 4. After saving the image does not go away
 
-### Features will be added and issues will be fixed in future
+### Features will be added and issues will be fixed in the future
 
 ## License
 
